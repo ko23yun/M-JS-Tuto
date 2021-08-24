@@ -1,1 +1,1 @@
-console.log("First Study");
+console.log(1);
