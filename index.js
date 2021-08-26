@@ -1,25 +1,8 @@
-// 함수 호출 전
-let menu = {
-  width: 200,
-  height: 300,
-  title: "My menu",
+let user = {
+  name: "John",
+  age: 30,
 };
 
-function multiplyNumeric(menu) {
-  for (let key in menu) {
-    if (typeof menu[key] === Number) {
-      menu[key] *= 2;
-    }
-  }
-}
+let clone = Object.assign({}, user);
 
-multiplyNumeric(menu);
-
-// 함수 호출 후
-// menu = {
-//   width: 400,
-//   height: 600,
-//   title: "My menu",
-// };
-
-console.log(menu);
+console.log(clone == user);
