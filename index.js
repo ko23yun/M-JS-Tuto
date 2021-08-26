@@ -1,14 +1,8 @@
-let user = {
-  name: "John",
-  age: 30,
-};
+let arr = [1, 2, 5];
 
-let clone = {}; // 새로운 빈 객체
+// 인덱스 -1부터 (배열 끝에서부터 첫 번째 요소)
+// 0개의 요소를 삭제하고
+// 3과 4를 추가합니다.
+arr.splice(-1, 0, 3, 4);
 
-// 빈 객체에 user 프로퍼티 전부를 복사해 넣습니다.
-for (let key in user) {
-  clone[key] = user[key];
-  console.log(user[key]);
-}
-
-// console.log(clone);
+console.log(arr);
