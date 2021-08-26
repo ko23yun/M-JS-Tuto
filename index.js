@@ -1,8 +1,25 @@
-let arr = [1, 2, 5];
+// 함수 호출 전
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu",
+};
 
-// 인덱스 -1부터 (배열 끝에서부터 첫 번째 요소)
-// 0개의 요소를 삭제하고
-// 3과 4를 추가합니다.
-arr.splice(-1, 0, 3, 4);
+function multiplyNumeric(menu) {
+  for (let key in menu) {
+    if (typeof menu[key] === Number) {
+      menu[key] *= 2;
+    }
+  }
+}
 
-console.log(arr);
+multiplyNumeric(menu);
+
+// 함수 호출 후
+// menu = {
+//   width: 400,
+//   height: 600,
+//   title: "My menu",
+// };
+
+console.log(menu);
