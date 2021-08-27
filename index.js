@@ -1,8 +1,17 @@
-let user = {
-  name: "John",
-  age: 30,
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep() {
+    console.log(this.step);
+    return this;
+  },
 };
 
-let clone = Object.assign({}, user);
-
-console.log(clone == user);
+ladder.up().up().down().up().down().showStep(); // 1
