@@ -1,17 +1,5 @@
-let ladder = {
-  step: 0,
-  up() {
-    this.step++;
-    return this;
-  },
-  down() {
-    this.step--;
-    return this;
-  },
-  showStep() {
-    console.log(this.step);
-    return this;
-  },
-};
+function extractCurrencyValue(str) {
+  return +str.slice(1);
+}
 
-ladder.up().up().down().up().down().showStep(); // 1
+console.log(extractCurrencyValue("$120") === 120);
