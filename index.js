@@ -1,5 +1,5 @@
-function extractCurrencyValue(str) {
-  return +str.slice(1);
-}
+let arr = [1, 2, 3, 4, 5];
 
-console.log(extractCurrencyValue("$120") === 120);
+for (let num in arr) {
+  console.log(num);
+}
