@@ -1,7 +1,11 @@
-// 2012년 2월 20일, 오전 3시 12분을 나타내는 Date 객체를 만들어보세요(시간대는 로컬).
+function getSecondsToTomorrow() {
+  let now = new Date();
 
-// 그리고 alert 함수를 이용해 생성한 객체를 출력하세요.
+  // 현재 년, 월, 일을 나타내는 객체를 생성
+  let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
 
-let answer = new Date(2012, 1, 20, 3, 12);
+  let diff = tomorrow - now; // 차이(ms)
+  return Math.round(diff / 1000); // 초로 변환
+}
 
-console.log(answer);
+console.log(getSecondsToTomorrow());
